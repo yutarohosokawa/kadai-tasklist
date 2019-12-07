@@ -1,4 +1,7 @@
       <%= form_with(model: @task, local: true) do |f| %>
+      
+        <%= render 'layouts/error_messages', model: f.object %>
+        
         <div class="form-group">
           <%= f.label :title, 'タイトル' %>
           <%= f.text_field :content, class: 'form-control' %>
